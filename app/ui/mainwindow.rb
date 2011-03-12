@@ -2,7 +2,6 @@ require 'app/boot'
 
 require 'json'
 puts _("Hackety Hack - Cheat Sheet")
-puts FastGettext.locale
 # methods for the main app
 module HH::App
   # starts a lesson
