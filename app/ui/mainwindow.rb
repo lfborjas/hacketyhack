@@ -1,7 +1,8 @@
 require 'app/boot'
 
 require 'json'
-
+puts _("Hackety Hack - Cheat Sheet")
+puts FastGettext.locale
 # methods for the main app
 module HH::App
   # starts a lesson
@@ -77,7 +78,7 @@ window :title => "Hackety Hack", :width => w, :height => h do
     Shoes.show_manual
   end
   addtab :Cheat, :icon => "tab-cheat.png" do
-    dialog :title => "Hackety Hack - Cheat Sheet", :width => 496 do
+    dialog :title => _("Hackety Hack - Cheat Sheet"), :width => 496 do
       image "#{HH::STATIC}/hhcheat.png"
     end
   end

@@ -2,6 +2,13 @@
 # more initializations are in h-ety-h/init.rb
 
 require 'hpricot'
+require 'fast_gettext'
+
+FastGettext.add_text_domain('HH',:path=>'locales', :type=>:yaml)
+FastGettext.text_domain = "HH"
+FastGettext.locale = ENV["LOCALE"] || ENV["LC_ALL"] || ENV["LC_TYPE"] || ENV["LANG"] || 'en'
+
+include FastGettext::Translation
 
 module ::HH end
 
